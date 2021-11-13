@@ -8,10 +8,12 @@ services:
     volumes:
       - ./db_vol:/db
       - ./config_vol:/config
+      - ./service_vol:/service
     environment:
       PYTHONUNBUFFERED: 1
       RW_DB_PATH: /db/ransomwatch.db
       RW_CONFIG_PATH: /config/config.yaml
+      RW_SERVICE_PATH: /service/service-account.json
 
   proxy:
     image: captaingeech/tor-proxy:latest

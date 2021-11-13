@@ -13,7 +13,7 @@ class Site(Base):
     id = Column(Integer, primary_key=True)
     actor = Column(String)
     url = Column(String)
-    added = Column(DateTime(timezone=True), server_default=func.now())
+    added = Column(DateTime(timezone=True))
     last_scraped = Column(DateTime(timezone=True), nullable=True, default=None)
     last_up = Column(DateTime(timezone=True), nullable=True, default=None)
 

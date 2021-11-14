@@ -2,7 +2,6 @@ requests
 requests[socks]
 stem
 beautifulsoup4
-pybigquery
 gcloud
 google-cloud-bigquery-storage
 SQLAlchemy

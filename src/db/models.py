@@ -2,15 +2,19 @@ from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
+import uuid
 
 from .database import engine
 
 Base = declarative_base()
 
+def generate_id():
+    return uuid.uuid4().int
+
 class Site(Base):
     __tablename__ = "sites"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, default=generate_id)
     actor = Column(String)
     url = Column(String)
     added = Column(DateTime(timezone=True))
@@ -23,7 +27,7 @@ class Site(Base):
 class Victim(Base):
     __tablename__ = "victims"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, default=generate_id)
     name = Column(String)
     url = Column(String, unique=True, nullable=True, default=None) # not all sites have individual victim URLs
     published = Column(DateTime(timezone=True), nullable=True)

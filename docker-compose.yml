@@ -14,6 +14,6 @@ services:
       RW_DB_PATH: /db/ransomwatch.db
       RW_CONFIG_PATH: /config/config.yaml
       RW_SERVICE_PATH: /service/service-account.json
-
+      BIGQUERY_PATH: "bigquery://srcc-observatory/ransomwatch_dev"
   proxy:
     image: captaingeech/tor-proxy:latest

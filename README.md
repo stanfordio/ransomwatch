@@ -1,4 +1,6 @@
-# RansomWatch
+# RansomWatch (SIO Build)
+
+*This is the Internet Observatory's custom RansomWatch build. It contains modifications such that data is written to BigQuery. Kubernetes config files are maintained inside the DGAP repository. The BigQuery path is specified via the `BIGQUERY_PATH` environment variable.*
 
 [![Build Image](https://github.com/captainGeech42/ransomwatch/workflows/Build%20Image/badge.svg)](https://github.com/captainGeech42/ransomwatch/actions?query=workflow%3A%22Build+Image%22) [![Docker Hub Publish](https://github.com/captainGeech42/ransomwatch/workflows/Docker%20Hub%20Publish/badge.svg)](https://github.com/captainGeech42/ransomwatch/actions?query=workflow%3A%22Docker+Hub+Publish%22) [![Docker Hub Image](https://img.shields.io/docker/v/captaingeech/ransomwatch?color=blue)](https://hub.docker.com/repository/docker/captaingeech/ransomwatch/general)
 

@@ -14,6 +14,6 @@ import google.cloud.bigquery
 # on the thread)
 
 
-engine = create_engine('bigquery://srcc-observatory/ransomwatch_dev', credentials_path=os.getenv("RW_SERVICE_PATH", "service-account.json"))
+engine = create_engine(os.getenv("BIGQUERY_PATH"), credentials_path=os.getenv("RW_SERVICE_PATH", "service-account.json"))
 
 Session: Callable[[], SessionType] = sessionmaker(bind=engine, expire_on_commit=False)
